@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", sans-serif;
+}
+.ttop{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background:  #081621;
+}
+.top{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    background: #fff;
+    box-shadow: 0px 3px #EDEDED;
+
+}
+nav .navibar{
+    
+    background: #fff;
+    width: 1450px;
+    margin: auto;
+
+
+}
+nav ul li a{
+    color: black;
+    display: inline-block;
+    padding: 15px 5px;
+    text-decoration: none;
+    position:relative;
+ 
+}
+nav .row{
+    display: flex;
+    justify-content: center;
+}
+nav ul{
+    /* display: flex; */
+
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+   
+}
+nav ul li a:hover{
+    color: rgb(255, 136, 0);
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #ee4300;
+    left: 0;
+    bottom: 0;
+}
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+nav .parent{
+    position: relative;
+}
+nav .parent .child{
+    position: absolute;
+    background: #fff;
+    width: 150px;
+    text-align: center;
+    box-shadow: 3px 3px 20px #aaa9a9;
+    margin-top: 80px;
+    border-radius: 5px;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+}
+nav .parent .child li a:hover{
+    color: #fff;
+    background-color: #ee4300;
+}
+nav .parent .child li{
+    width: 150px;
+}
+nav .parent .child li a{
+    color: #666;
+    display: block;
+
+}
+nav .parent:hover .child{
+    margin-top: 0px;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.4s;
+    border-top: 5px solid #ee4300;
+   
+}
+nav .parent .ssparent{
+    position: relative;
+}
+nav .parent .sschild{
+    position: absolute;
+    top: 0%;
+ left: 100%; 
+ border-radius: 5px;
+ transform: scale(0);
+ box-shadow: 3px 3px 20px #aaa9a9da;
+ opacity: 0;
+ visibility: hidden;
+}
+nav .parent .ssparent:hover .sschild{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+    transform: scale(1);
+}
+nav .parent .ssparent::after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    border-right: 3px solid #ee4300;
+    border-bottom: 3px solid #ee4300;
+    right: 10%;
+    top: 40%;
+    transform: rotate(-45deg);
+}
+
